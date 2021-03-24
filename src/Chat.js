@@ -1,7 +1,17 @@
 import React from 'react'
 import './Chat.css'
+import {useState} from 'react'
 
 function Chat() {
+
+    const [input, setinput] = useState('');
+
+    const SendMessage = (e) => {
+        e.preventDefault();
+        console.log('you typed >>> ',input)
+        setinput('')
+    } ;
+
     return (
         <div className='chat'>
 
@@ -34,8 +44,8 @@ function Chat() {
             <div className='chat_footer'>
                 <span>Icon</span>
                 <form>
-                    <input type='text' placeholder='Type a message'></input>
-                    <button type='submit'>Send</button>
+                    <input value={input} onChange={(e) => setinput(e.target.value)} type='text' placeholder='Type a message'></input>
+                    <button type='submit' onClick={SendMessage}>Send</button>
                 </form>
                 <span>Icon</span>
             </div>
