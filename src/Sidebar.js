@@ -1,8 +1,16 @@
 import React from 'react';
+import db from './Firebase';
 import Room from './Room';
 import './Sidebar.css';
 
 function Sidebar() {
+
+    // useEffect(() => {
+    //     db.collection('rooms').onSnapshot(snapshot => {
+
+    //     })
+    // }, [])
+
     return (
         <div className='sidebar'>
             {/* <h1> Sidebar Section </h1> */}
@@ -24,10 +32,7 @@ function Sidebar() {
             </div>
             {/* Sidebarchats */}
             <div className='sidebar_chats'>
-                <Room addNewChat/>
-                <Room />
-                <Room />
-                <Room />
+                <Room addNewChat />
 
                 {/* <div>Rooms</div>
                 <div>Rooms</div>

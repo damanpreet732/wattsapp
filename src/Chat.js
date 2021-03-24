@@ -6,7 +6,7 @@ function Chat() {
 
     const [input, setinput] = useState('');
 
-    const SendMessage = (e) => {
+    const sendMessage = (e) => {
         e.preventDefault();
         console.log('you typed >>> ',input)
         setinput('')
@@ -45,7 +45,7 @@ function Chat() {
                 <span>Icon</span>
                 <form>
                     <input value={input} onChange={(e) => setinput(e.target.value)} type='text' placeholder='Type a message'></input>
-                    <button type='submit' onClick={SendMessage}>Send</button>
+                    <button type='submit' onClick={sendMessage}>Send</button>
                 </form>
                 <span>Icon</span>
             </div>
