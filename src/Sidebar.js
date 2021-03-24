@@ -5,11 +5,11 @@ import './Sidebar.css';
 
 function Sidebar() {
 
-    // useEffect(() => {
-    //     db.collection('rooms').onSnapshot(snapshot => {
-
-    //     })
-    // }, [])
+    useEffect(() => {
+        db.collection('rooms').onSnapshot(snapshot => {
+            
+        })
+    }, [])
 
     return (
         <div className='sidebar'>
