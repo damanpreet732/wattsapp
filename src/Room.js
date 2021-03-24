@@ -1,11 +1,11 @@
 import React from 'react';
 import './Room.css';
 
-function Room({ addNewChat }) {
+function Room({ addNewChat, id, name }) {
 
     const createChart = () => {
         const roomName = prompt('Enter name for chat : ');
-        if(roomName){
+        if (roomName) {
             // do some stuff from database
         }
     }
@@ -14,7 +14,7 @@ function Room({ addNewChat }) {
         <div className='room'>
             <span>Avatar</span>
             <div className='room_info'>
-                <h3>Room Name</h3>
+                <h3>{name}</h3>
                 <p>Last message ...</p>
             </div>
         </div>

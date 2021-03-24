@@ -3,11 +3,20 @@ import db from './Firebase';
 import Room from './Room';
 import './Sidebar.css';
 
+import { useEffect, useState } from 'react';
+
 function Sidebar() {
+
+    const [rooms, setrooms] = useState([])
 
     useEffect(() => {
         db.collection('rooms').onSnapshot(snapshot => {
-            
+            setrooms(snapshot.docs.map(doc =>
+            ({
+                id: doc.id,
+                data: doc.data(),
+            })
+            ))
         })
     }, [])
 
@@ -33,6 +42,9 @@ function Sidebar() {
             {/* Sidebarchats */}
             <div className='sidebar_chats'>
                 <Room addNewChat />
+                {rooms.map(room => (
+                    <Room key={room.id} id={room.id} name={room.name} />
+                ))}
 
                 {/* <div>Rooms</div>
                 <div>Rooms</div>
