@@ -1,4 +1,5 @@
 import React from 'react';
+import db from './Firebase';
 import './Room.css';
 
 function Room({ addNewChat, id, name }) {
@@ -6,6 +7,9 @@ function Room({ addNewChat, id, name }) {
     const createChart = () => {
         const roomName = prompt('Enter name for chat : ');
         if (roomName) {
+            db.collection('rooms').add({
+                name : roomName,
+            })
             // do some stuff from database
         }
     }
