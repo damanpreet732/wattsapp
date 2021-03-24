@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react';
 function Sidebar() {
 
     const [rooms, setrooms] = useState([])
+    // const [roomId, setroomId] = useState('')
 
     useEffect(() => {
         db.collection('rooms').onSnapshot(snapshot => {

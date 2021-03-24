@@ -2,26 +2,30 @@ import React from 'react';
 import db from './Firebase';
 import './Room.css';
 
+import {Link} from 'react-router-dom'
+
 function Room({ addNewChat, id, name }) {
 
     const createChart = () => {
         const roomName = prompt('Enter name for chat : ');
         if (roomName) {
             db.collection('rooms').add({
-                name : roomName,
+                name: roomName,
             })
             // do some stuff from database
         }
     }
 
     return !addNewChat ? (
-        <div className='room'>
-            <span>Avatar</span>
-            <div className='room_info'>
-                <h3>{name}</h3>
-                <p>Last message ...</p>
+        <Link to={`/rooms/${id}`}>
+            <div className='room'>
+                <span>Avatar</span>
+                <div className='room_info'>
+                    <h3>{name}</h3>
+                    <p>Last message ...</p>
+                </div>
             </div>
-        </div>
+        </Link>
     ) : (
         <div className='room'>
             <h2 onClick={createChart}>Add New Chat</h2>
