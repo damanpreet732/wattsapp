@@ -1,0 +1,23 @@
+.login{
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    width: 50vh;
+    text-align: center;
+    align-items: center;
+    background: white;
+    box-shadow: 0 0 20px 5px grey;
+}
+
+.loginContainer{
+    padding : 30px ;
+}
+
+.loginContainer > img {
+    height: 30vh;
+}
+
+.loginContainer > button {
+    margin-top: 30px;
+    padding: 5px;
+}
