@@ -12,6 +12,11 @@
     background-color:#f6f6f6;
 }
 
+.sidebar_header .avatar{
+    height : 5vh ;
+    border-radius: 50%;
+}
+
 .sidebar_headerRight{
     display: flex;
     justify-content: space-between;

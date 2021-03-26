@@ -31,7 +31,7 @@ function Chat() {
         <div className='chat'>
 
             <div className='chat_header'>
-                <span>Avatar</span>
+                <img src='' alt=''></img>
                 <div className='header_info'>
                     <h3>{roomName}</h3>
                     <p>Last seen .....</p>

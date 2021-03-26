@@ -19,7 +19,7 @@ function Room({ addNewChat, id, name }) {
     return !addNewChat ? (
         <Link to={`/rooms/${id}`}>
             <div className='room'>
-                <span>Avatar</span>
+                <img src='' alt=''></img>
                 <div className='room_info'>
                     <h3>{name}</h3>
                     <p>Last message ...</p>

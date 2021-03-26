@@ -4,10 +4,12 @@ import Room from './Room';
 import './Sidebar.css';
 
 import { useEffect, useState } from 'react';
+import { useStateValue } from './StateProvider';
 
 function Sidebar() {
 
     const [rooms, setrooms] = useState([])
+    const [{user},dispatch] = useStateValue();
     // const [roomId, setroomId] = useState('')
 
     useEffect(() => {
@@ -26,7 +28,7 @@ function Sidebar() {
             {/* <h1> Sidebar Section </h1> */}
             {/* SidebarHeader */}
             <div className='sidebar_header'>
-                <span>Avatar</span>
+                <img className='avatar' src={user?.photoURL} alt=''></img>
                 <div className='sidebar_headerRight'>
                     <span>Icon</span>
                     <span>Icon</span>
