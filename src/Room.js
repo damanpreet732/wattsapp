@@ -16,6 +16,8 @@ function Room({ addNewChat, id, name }) {
         }
     }
 
+    
+
     return !addNewChat ? (
         <Link to={`/rooms/${id}`}>
             <div className='room'>
