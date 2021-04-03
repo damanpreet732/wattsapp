@@ -36,7 +36,7 @@
     background-position: center;
     background-repeat: repeat;
     padding: 20px ;
-    /* overflow: scroll; */
+    overflow: scroll;
     background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
 }
 

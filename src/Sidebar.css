@@ -56,3 +56,8 @@
     overflow: scroll;
     background-color: white;
 }
+
+.sidebar_chats > a {
+    text-decoration: none ;
+    color : black ;
+}

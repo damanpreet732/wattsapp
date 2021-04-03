@@ -59,7 +59,7 @@ function Chat() {
                 <img src='' alt=''></img>
                 <div className='header_info'>
                     <h3>{roomName}</h3>
-                    <p>Last seen {' '} {messages[messages.length - 1]?.timestamp.toDate().toUTCString()}</p>
+                    <p>Last seen {" "} {new Date (messages[messages.length -1 ]?.timestamp?.toDate()).toUTCString()}</p>
                 </div>
                 <div className='header_right'>
                     <span>Icon</span>
